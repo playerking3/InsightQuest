@@ -2,7 +2,14 @@ import {StyleSheet} from "react-native";
 
 export const css = StyleSheet.create({
     fundo: {
-        background: 'black'
+        backgroundColor: 'black',
+        height: 70,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    texto: {
+        color: 'white',
+        fontSize: 20
     }
 })
 
