@@ -1,11 +1,12 @@
 import {SafeAreaView, StyleSheet, Text, View} from "react-native";
+import React, {useContext, useState} from "react"
 import Header from "../components/Header";
 import Foto from "../components/Foto";
 import Imagem from "../components/Imagem";
 import InputTexto from "../components/InputTexto";
 import Btn from "../components/Btn";
 import Fundo from "../components/Fundo";
-import Jogo from "./Jogo";
+import {Dados} from "../context/Dados";
 
 export default function ({navigation}){
     function enviarMensagem(){
