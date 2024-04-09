@@ -1,19 +1,20 @@
-import React from "react";
+import { StyleSheet, Text, View } from 'react-native';
 import {NavigationContainer} from "@react-navigation/native";
-import {StatusBar } from 'react-native';
-import Home from "./screens/Home";
+import {createStackNavigator} from "@react-navigation/stack";
 import Inicio from "./screens/Inicio";
-import Jogo from "./screens/Jogo";
+
 
 export default function App() {
+
+  const Stack = createStackNavigator()
+
   return (
-        <NavigationContainer>
-          <StatusBar/>
-          <Stack.Navigator initialRouteName={'Inicio'} screenOptions={{ headerShown: false}}>
-            <Stack.Screen name="Inicio" component={Inicio}/>
-            <Stack.Screen name="Home" component={Home}/>
-            <Stack.Screen name="Jogo" component={Jogo}/>
+      <NavigationContainer>
+          <Stack.Navigator
+              initialRouteName={'Inicio'}
+              screenOptions={{ headerShown: false}}>
+              <Stack.Screen name="Inicio" component={Inicio}/>
           </Stack.Navigator>
-        </NavigationContainer>
+      </NavigationContainer>
   );
 }
