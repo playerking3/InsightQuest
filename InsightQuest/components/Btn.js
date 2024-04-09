@@ -7,7 +7,7 @@ export default function (props, {navigation}){
 
     return(
         <View>
-            <Pressable  onPress={() => navigation.navigate("Home")}>
+            <Pressable  onPress={() => navigation.navigate("Home")} style={css.btn}>
                 <Text>{props.escrita}</Text>
             </Pressable>
         </View>
