@@ -8,6 +8,11 @@ import Fundo from "../components/Fundo";
 import Jogo from "./Jogo";
 
 export default function ({navigation}){
+    function enviarMensagem(){
+        alert('deu certo')
+        navigation.navigate('Jogo')
+    }
+
     return(
         <SafeAreaView style={css.main}>
             <View>
@@ -23,7 +28,7 @@ export default function ({navigation}){
                             </View>
                             <View style={css.divinp}>
                                 <InputTexto texto={'Insira o conteúdo da imagem aqui'}></InputTexto>
-                                <Btn escrita={'ENVIAR'} navigation={navigation} page={"Jogo"}>0</Btn>
+                                <Btn escrita={'ENVIAR'} funcao={enviarMensagem}>0</Btn>
                             </View>
                         </View>
                     </View>
