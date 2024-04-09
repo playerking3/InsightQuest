@@ -5,6 +5,8 @@ import Btn from "../components/Btn";
 import Imagem from "../components/Imagem";
 import Fundo from "../components/Fundo";
 import {useState} from "react";
+import Foto from "../components/Foto";
+
 export default function ({navigation}){
     const [blur,setBlur] = useState(100)
     const css = StyleSheet.create({

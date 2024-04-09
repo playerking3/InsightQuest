@@ -1,9 +1,38 @@
-import {SafeAreaView, Text} from "react-native";
+import {SafeAreaView, StyleSheet, Text, View} from "react-native";
+import Header from "../components/Header";
+import Foto from "../components/Foto";
+import Imagem from "../components/Imagem";
+import InputTexto from "../components/InputTexto";
+import Btn from "../components/Btn";
+import Fundo from "../components/Fundo";
+import Jogo from "./Jogo";
 
-export default function (){
+export default function ({navigation}){
     return(
-        <SafeAreaView>
-
+        <SafeAreaView style={css.main}>
+            <Fundo>
+                <View>
+                    <Foto></Foto>
+                </View>
+                <Imagem></Imagem>
+                <View style={css.divinp}>
+                    <InputTexto texto={'Insira o conteúdo da imagem aqui'}></InputTexto>
+                    <Btn escrita={'ENVIAR'} navigation={navigation} page={"Jogo"}>0</Btn>
+                </View>
+            </Fundo>
         </SafeAreaView>
     )
 }
+
+
+const css = StyleSheet.create({
+    main:{
+        width:'100%'
+    },
+    divinp:{
+        gap:35,
+        display:'flex',
+        alignItems:"center",
+        width:'100%'
+    }
+})
