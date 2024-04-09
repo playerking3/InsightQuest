@@ -1,11 +1,14 @@
 import {Pressable, StyleSheet, Text, View} from "react-native";
 import {useState} from "react";
 
-export default function ({ page,escrita, navigation }){
+export default function ({escrita, funcao, navigation, page}){
 
+    function executarENavegar(){
+        funcao()
+    }
 
     return(
-            <Pressable  onPress={() => navigation.navigate(page)} style={css.btn}>
+            <Pressable  onPress={() => executarENavegar()} style={css.btn}>
                 <Text style={{color:'white'}}>{escrita}</Text>
             </Pressable>
     )
