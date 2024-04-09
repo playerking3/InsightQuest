@@ -11,6 +11,7 @@ export default function (props){
                     borderWidth: 3,
                     borderColor: "black",
                     paddingLeft:10,
+                    backgroundColor:'white',
                     borderRadius: 15}}
             />
     )
