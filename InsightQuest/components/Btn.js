@@ -1,14 +1,13 @@
 import {Pressable, StyleSheet, Text, View} from "react-native";
 import {useState} from "react";
 
-export default function ({ page, navigation }){
+export default function ({ page,escrita, navigation }){
 
-    const [escrita, setEscrita] = useState("")
 
     return(
         <View>
             <Pressable  onPress={() => navigation.navigate(page)} style={css.btn}>
-                <Text>{escrita}</Text>
+                <Text style={{color:'white'}}>{escrita}</Text>
             </Pressable>
         </View>
     )
@@ -20,6 +19,10 @@ const css = StyleSheet.create({
         width: "80%",
         backgroundColor: "#4065EC",
         color: "#FFFFFF",
-        borderRadius: 15
+        borderRadius: 15,
+        display:"flex",
+        justifyContent:"center",
+        alignItems:"center",
+        height:40,
     }
 })
