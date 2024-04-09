@@ -1,10 +1,10 @@
 import {SafeAreaView, StyleSheet, Text, View} from "react-native";
-import {Header} from "@react-navigation/stack";
 import InputTexto from "../components/InputTexto";
 import Btn from "../components/Btn";
 import Imagem from "../components/Imagem";
 import Fundo from "../components/Fundo";
 import {useState} from "react";
+import Header from "../components/Header"
 import Foto from "../components/Foto";
 
 export default function ({navigation}){
@@ -32,6 +32,7 @@ export default function ({navigation}){
     })
     return(
         <Fundo>
+            <Header></Header>
             <View style={css.main}>
                 <View style={css.divimg}>
                     <Text>Olá</Text>

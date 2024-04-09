@@ -10,16 +10,25 @@ import Jogo from "./Jogo";
 export default function ({navigation}){
     return(
         <SafeAreaView style={css.main}>
-            <Fundo>
-                <View>
-                    <Foto></Foto>
-                </View>
-                <Imagem></Imagem>
-                <View style={css.divinp}>
-                    <InputTexto texto={'Insira o conteúdo da imagem aqui'}></InputTexto>
-                    <Btn escrita={'ENVIAR'} navigation={navigation} page={"Jogo"}>0</Btn>
-                </View>
-            </Fundo>
+            <View>
+                <Fundo>
+                    <Header></Header>
+                    <View style={{height: "80%", justifyContent: "center"}}>
+                        <View>
+                            <Foto></Foto>
+                        </View>
+                        <View style={{gap: 30}}>
+                            <View>
+                                <Imagem></Imagem>
+                            </View>
+                            <View style={css.divinp}>
+                                <InputTexto texto={'Insira o conteúdo da imagem aqui'}></InputTexto>
+                                <Btn escrita={'ENVIAR'} navigation={navigation} page={"Jogo"}>0</Btn>
+                            </View>
+                        </View>
+                    </View>
+                </Fundo>
+            </View>
         </SafeAreaView>
     )
 }
@@ -27,7 +36,8 @@ export default function ({navigation}){
 
 const css = StyleSheet.create({
     main:{
-        width:'100%'
+        width:'100%',
+        justifyContent: "center"
     },
     divinp:{
         gap:35,
