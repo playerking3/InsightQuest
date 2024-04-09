@@ -13,7 +13,7 @@ export default function App() {
   return (
       <NavigationContainer>
           <Stack.Navigator
-              initialRouteName={'Inicio'}
+              initialRouteName={'Jogo'}
               screenOptions={{ headerShown: false}}>
               <Stack.Screen name="Inicio" component={Inicio}/>
               <Stack.Screen name="Home" component={Home}/>
