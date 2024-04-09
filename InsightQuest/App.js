@@ -14,7 +14,7 @@ export default function App() {
       <NavigationContainer>
           <StatusBar translucent={false} />
           <Stack.Navigator
-              initialRouteName={'Home'}
+              initialRouteName={'Inicio'}
               screenOptions={{ headerShown: false}}>
               <Stack.Screen name="Inicio" component={Inicio}/>
               <Stack.Screen name="Home" component={Home}/>

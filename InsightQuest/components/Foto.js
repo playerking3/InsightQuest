@@ -10,11 +10,22 @@ export default function (props){
             justifyContent:"center",
             alignItems:"center",
             width:70,
+            borderRadius:10,
             height:70
+        },
+        icons:{
+            display:"flex",
+            flexDirection:"row",
+            marginTop:30,
+            marginBottom:30,
+            gap:30,
+            width:'100%',
+            justifyContent:"center",
+            alignItems:"center"
         }
     })
     return(
-        <View>
+        <View style={css.icons}>
             <View style={css.divicon}>
                 <FontAwesomeIcon size={50} icon={faCameraRetro} />
             </View>
