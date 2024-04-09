@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import {StatusBar, StyleSheet, Text, View} from 'react-native';
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
 import Inicio from "./screens/Inicio";
@@ -12,6 +12,7 @@ export default function App() {
 
   return (
       <NavigationContainer>
+          <StatusBar translucent={false} />
           <Stack.Navigator
               initialRouteName={'Jogo'}
               screenOptions={{ headerShown: false}}>
