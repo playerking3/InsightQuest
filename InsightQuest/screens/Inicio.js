@@ -1,9 +1,10 @@
 import {SafeAreaView, Text} from "react-native";
+import Header from "../components/Header";
 
 export default function (){
     return(
         <SafeAreaView>
-            <Text>aaaaaa</Text>
+            <Header></Header>
         </SafeAreaView>
     )
 }
