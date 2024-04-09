@@ -1,9 +1,6 @@
-import {SafeAreaView, Text} from "react-native";
+import {Text, View} from "react-native";
+import Header from "../components/Header";
 
 export default function (){
-    return(
-        <SafeAreaView>
-            <Text>aaaaaa</Text>
-        </SafeAreaView>
-    )
+    return(<Header></Header>)
 }
