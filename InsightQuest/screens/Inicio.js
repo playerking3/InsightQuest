@@ -3,11 +3,13 @@ import Header from "../components/Header";
 import Foto from "../components/Foto";
 import InputTexto from "../components/InputTexto";
 import Btn from "../components/Btn";
+import Imagem from "../components/Imagem";
+import Fundo from "../components/Fundo";
 
 export default function (){
     return(
         <SafeAreaView>
-            <ImageBackground>
+            <Fundo>
                 <Header></Header>
                 <View>
                     <Foto></Foto>
@@ -23,8 +25,7 @@ export default function (){
                         <Btn></Btn>
                     </View>
                 </View>
-            </ImageBackground>
-
+            </Fundo>
         </SafeAreaView>
     )
 }
