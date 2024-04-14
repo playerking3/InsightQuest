@@ -1,14 +1,14 @@
-import React, {createContext} from "react";
+import React, {createContext, useState} from "react";
 
 const Dados = createContext()
 
 function DadosProvider({children}){
 
-    const [imageUri, setImageUri] = React.useState(null);
-    const [image, setImage] = React.useState(null);
+    const [imageUri, setImageUri] = useState(null);
+    const [resposta, setResposta] = useState()
 
     return(
-        <Dados.Provider value={{imageUri, setImageUri}}>
+        <Dados.Provider value={{imageUri, setImageUri, resposta, setResposta}}>
             {children}
         </Dados.Provider>
     );

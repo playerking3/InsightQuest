@@ -3,12 +3,12 @@ import {useState} from "react";
 
 export default function ({escrita, funcao, navigation, page}){
 
-    function executarENavegar(){
+    function executarAcao(){
         funcao()
     }
 
     return(
-            <Pressable  onPress={() => executarENavegar()} style={css.btn}>
+            <Pressable  onPress={() => executarAcao()} style={css.btn}>
                 <Text style={{color:'white'}}>{escrita}</Text>
             </Pressable>
     )

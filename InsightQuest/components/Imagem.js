@@ -4,7 +4,7 @@ import {useContext} from "react";
 import {Dados} from "../context/Dados";
 
 export default function (props){
-    const {imageUri, image} = useContext(Dados)
+    const {imageUri} = useContext(Dados)
 
     return(
         <View style={css.fundo}>

@@ -9,8 +9,10 @@ import Fundo from "../components/Fundo";
 import {Dados} from "../context/Dados";
 
 export default function ({navigation}){
+
+    const {setResposta} = useContext(Dados)
+
     function enviarMensagem(){
-        alert('deu certo')
         navigation.navigate('Jogo')
     }
 
@@ -28,7 +30,7 @@ export default function ({navigation}){
                                 <Imagem></Imagem>
                             </View>
                             <View style={css.divinp}>
-                                <InputTexto texto={'Insira o conteúdo da imagem aqui'}></InputTexto>
+                                <InputTexto texto={'Insira o conteúdo da imagem aqui'} setar={setResposta}></InputTexto>
                                 <Btn escrita={'ENVIAR'} funcao={enviarMensagem}>0</Btn>
                             </View>
                         </View>

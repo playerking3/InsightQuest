@@ -1,8 +1,10 @@
 import {SafeAreaView, Text, View, TextInput} from "react-native";
 
 export default function (props){
+
+
     return(
-            <TextInput
+            <TextInput onChangeText={props.setar}
                 placeholder={props.texto}
                 value={props.value}
                 style={{
