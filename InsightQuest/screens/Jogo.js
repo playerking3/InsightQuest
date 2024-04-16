@@ -6,6 +6,7 @@ import Fundo from "../components/Fundo";
 import {useContext, useState} from "react";
 import Header from "../components/Header"
 import {Dados} from "../context/Dados";
+import {waitFor} from "@babel/core/lib/gensync-utils/async";
 
 export default function ({navigation}){
     const {resposta} = useContext(Dados)
@@ -45,6 +46,10 @@ export default function ({navigation}){
         if (alternativa === resposta){
             alert('Prabéns, você acertou')
             navigation.navigate('Home')
+            Vibration.vibrate(600)
+            setTimeout(()=>{
+                Vibration.vibrate(600)
+            },700)
         }else if (vidas > 1){
             setVidas(vidas-1)
             Vibration.vibrate(600)
