@@ -1,4 +1,4 @@
-import {SafeAreaView, StyleSheet, Text, View} from "react-native";
+import {SafeAreaView, StyleSheet, Text, View, Button, Platform, Vibration} from "react-native";
 import InputTexto from "../components/InputTexto";
 import Btn from "../components/Btn";
 import Imagem from "../components/Imagem";
@@ -30,6 +30,14 @@ export default function ({navigation}){
             height:200,
             width:200,
 
+        },
+        tentativas:{
+            textAlign:"center",
+            marginBottom:20,
+            color:'white',
+            backgroundColor:'#4065EC',
+            borderRadius:10,
+            padding:10
         }
     })
 
@@ -39,6 +47,7 @@ export default function ({navigation}){
             navigation.navigate('Home')
         }else if (vidas > 1){
             setVidas(vidas-1)
+            Vibration.vibrate(600)
         }else{
             alert('Tente novamente')
             navigation.navigate('Home')
@@ -50,7 +59,7 @@ export default function ({navigation}){
             <Header></Header>
             <View style={css.main}>
                 <View style={css.divimg}>
-                    <Text>Tentativas: {vidas-1}</Text>
+                    <Text style={css.tentativas}>Tentativas: {vidas-1}</Text>
                     <Imagem blur={vidas*20}></Imagem>
                 </View>
                 <View style={css.divinp}>
